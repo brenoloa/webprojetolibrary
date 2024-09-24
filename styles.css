@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e4e4e6;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+.formulario-container, #listaLivros {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #5cb85c;
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    background-color: #aeadec;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+button:hover {
+    background-color: #8987d4;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #3498db;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#livros {
+    list-style-type: none;
+    padding: 0;
+}
+
+.livro-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.livro-item img {
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.livro-item strong {
+    font-size: 1.2em;
+    color: #34495e;
+}
+
+.livro-item em {
+    color: #7f8c8d;
+}
+
+.livro-item small {
+    display: block;
+    color: #95a5a6;
+    margin-top: 10px;
+    max-width: 500px;
+    text-align: justify;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+button {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 200px;
+}
+
+#listaLivros {
+    max-width: 700px;
+    margin: 0 auto;
+}
