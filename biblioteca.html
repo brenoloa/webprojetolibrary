@@ -12,6 +12,26 @@
     <div id="listaLivros">
         <ul id="livros"></ul>
     </div>
+    <div id="modalEditar" class="modal">
+        <div class="modal-content">
+            <span class="close" id="fecharModal">&times;</span>
+            <h2>Editar Livro</h2>
+            <form id="formEditarLivro">
+                <input type="text" id="editTitulo" placeholder="Título">
+                <input type="text" id="editAutor" placeholder="Autor">
+                <input type="text" id="editGenero" placeholder="Gênero">
+                <input type="text" id="editAno" placeholder="Ano de Publicação">
+                <input type="text" id="editCodigoLivro" placeholder="Código do Livro">
+                <input type="url" id="editUrlCapa" placeholder="URL da Capa">
+                <input type="text" id="editEditora" placeholder="Editora">
+                <input type="text" id="editIdioma" placeholder="Idioma">
+                <input type="number" id="editPaginas" placeholder="Número de Páginas">
+                <textarea id="editDescricao" placeholder="Descrição"></textarea>
+                <button type="button" id="salvarEdicao">Salvar Alterações</button>
+            </form>
+        </div>
+    </div>
+    
     <a href="index.html">Voltar para Cadastro</a>
     <script src="script.js"></script>
 </body>
