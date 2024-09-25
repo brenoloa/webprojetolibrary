@@ -1,12 +1,13 @@
 body {
     font-family: Arial, sans-serif;
     background-image: url('background.png');
-    background-size: cover; /* Faz a imagem cobrir todo o fundo */
-    background-position: center; /* Centraliza a imagem */
-    background-attachment: fixed; /* Faz a imagem ficar fixa no fundo ao rolar a página */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 20px;
     color: #333;
+    min-height: 100vh; /* Garante que o corpo ocupe no mínimo toda a altura da tela */
 }
 
 body::before {
@@ -17,8 +18,16 @@ body::before {
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.0); /* Ajuste a cor e a opacidade (0.7 = 70%) */
-    z-index: -1; /* Mantém a camada atrás de todo o conteúdo */
+    z-index: -1;
 }
+
+@media (max-width: 768px) {
+    body {
+        background-position: top;
+        background-size: contain;
+    }
+}
+
 
 h1, h2 {
     color: #2c3e50;
