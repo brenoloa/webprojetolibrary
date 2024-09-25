@@ -1,11 +1,9 @@
 let livros = JSON.parse(localStorage.getItem('livros')) || [];
 
-// Função para salvar livros no armazenamento local
 function salvarLivros() {
     localStorage.setItem('livros', JSON.stringify(livros));
 }
 
-// Exibir livros na página de listagem
 function exibirLivros() {
     const listaLivros = document.getElementById('livros');
     if (listaLivros) {
@@ -26,7 +24,6 @@ function exibirLivros() {
     }
 }
 
-// Adicionar um novo livro
 document.getElementById('formularioLivro')?.addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -49,14 +46,27 @@ document.getElementById('formularioLivro')?.addEventListener('submit', function(
     this.reset();
 });
 
-// Remover um livro
 function removerLivro(indice) {
     livros.splice(indice, 1);
     salvarLivros();
     exibirLivros();
 }
 
-// Exibir livros na página de listagem ao carregar
 if (document.getElementById('livros')) {
     exibirLivros();
 }
+
+
+// Função para auto preencher os campos do formulário
+document.getElementById('autoPreencher')?.addEventListener('click', function() {
+    document.getElementById('titulo').value = 'O Cortiço';
+    document.getElementById('autor').value = 'Aluísio Azevedo';
+    document.getElementById('genero').value = 'Romance Naturalista';
+    document.getElementById('ano').value = '1890';
+    document.getElementById('codigoLivro').value = '123456'; // Código fictício
+    document.getElementById('urlCapa').value = 'https://cdn.kobo.com/book-images/841c0a68-000b-4f9e-85d4-860c4eab03af/1200/1200/False/o-cortico-33.jpg';
+    document.getElementById('editora').value = 'Livraria Garnier';
+    document.getElementById('idioma').value = 'Português';
+    document.getElementById('paginas').value = '250'; // Número fictício
+    document.getElementById('descricao').value = 'O Cortiço é um romance naturalista do brasileiro Aluísio Azevedo publicado em 1890 que denuncia a exploração e as péssimas condições de vida dos moradores das estalagens ou dos cortiços cariocas do final do século XIX e posto a denunciar o capitalismo selvagem.';
+});

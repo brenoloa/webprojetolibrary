@@ -11,7 +11,7 @@
     <h1>Biblioteca Virtual</h1>
     
     <div class="formulario-container">
-        <h2>Cadastrar Novo Livro</h2>
+        <h2>Cadastrar Novo Livro</h2> 
         <form id="formularioLivro">
             <input type="text" id="titulo" placeholder="Título" required>
             <input type="text" id="autor" placeholder="Autor" required>
@@ -23,7 +23,11 @@
             <input type="text" id="idioma" placeholder="Idioma" required>
             <input type="number" id="paginas" placeholder="Número de Páginas" required>
             <textarea id="descricao" placeholder="Descrição" required></textarea>
-            <button type="submit">Cadastrar Livro</button>
+        
+            <div class="botoes-container">
+                <button type="submit">Cadastrar Livro</button>
+                <button type="button" id="autoPreencher">Auto Preencher</button>
+            </div>
         </form>
         <a href="biblioteca.html">Ver Livros Cadastrados</a>
     </div>
