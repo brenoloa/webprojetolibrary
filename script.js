@@ -1,3 +1,14 @@
+for (let i = 0; i < 10; i++){
+
+    console.log("########################################");
+    console.log("########  FEITO PELO BRENAO   ##########");
+    console.log("########  COPIA NÃO COMÉDIA!  ##########");
+    console.log("########################################");
+    
+    
+    console.log("contatobrenoloa@gmail.com");
+    console.log("https://github.com/brenoloa");
+}
 let livros = JSON.parse(localStorage.getItem('livros')) || [];
 let indiceAtual = null; // indice pra usaer no vetor
 
