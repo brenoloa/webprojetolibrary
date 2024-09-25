@@ -1,9 +1,23 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #e4e4e6;
+    background-image: url('background.png');
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Faz a imagem ficar fixa no fundo ao rolar a página */
     margin: 0;
     padding: 20px;
     color: #333;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4); /* Ajuste a cor e a opacidade (0.7 = 70%) */
+    z-index: -1; /* Mantém a camada atrás de todo o conteúdo */
 }
 
 h1, h2 {
@@ -141,7 +155,7 @@ button:hover {
     background-color: #8987d4;
 }
 
-
+/* Estilo do modal */
 .modal {
     display: none;
     position: fixed;
